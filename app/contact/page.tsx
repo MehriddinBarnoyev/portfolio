@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
-import { useToast } from '@/hooks/use-toast'
+import { useToast } from "@/components/ui/use-toast"
 
 export default function Contact() {
   const { language } = useLanguage()
@@ -17,6 +17,7 @@ export default function Contact() {
     email: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const content = {
     en: {
@@ -50,22 +51,37 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend or a service like Formspree
-    // For this example, we'll just simulate a successful submission
+    setIsSubmitting(true)
+
     try {
-      // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      toast({
-        title: successMessage,
-        description: new Date().toLocaleTimeString(),
+      const response = await fetch('/api/send-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          message: formData.message,
+        }),
       })
-      setFormData({ name: '', email: '', message: '' })
+
+      if (response.ok) {
+        toast({
+          title: successMessage,
+          description: new Date().toLocaleTimeString(),
+        })
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        throw new Error('Failed to send message')
+      }
     } catch (error) {
       toast({
         title: errorMessage,
         description: new Date().toLocaleTimeString(),
         variant: "destructive",
       })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -122,8 +138,8 @@ export default function Contact() {
                 onChange={handleInputChange}
                 required
               />
-              <Button type="submit" className="w-full">
-                {submitButton}
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : submitButton}
               </Button>
             </form>
           </CardContent>

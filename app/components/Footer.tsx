@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { GitlabIcon as GitHub, Linkedin, Dribbble, Instagram , Telegram} from 'lucide-react'
+import { GithubIcon as GitHub, Linkedin, Dribbble, Instagram } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
 const Footer = () => {
@@ -36,11 +36,11 @@ const Footer = () => {
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            Your Name
+           Mehriddin
           </a>
           . The source code is available on{" "}
           <a
-            href="https://github.com/yourusername/portfolio"
+            href="https://github.com/MehriddinBarnoyev/portfolio"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"

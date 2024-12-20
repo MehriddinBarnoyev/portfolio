@@ -5,6 +5,9 @@ import { motion } from 'framer-motion'
 import { useLanguage } from './components/LanguageProvider'
 import { Button } from "@/components/ui/button"
 import ParticleBackground from './components/ParticleBackground'
+import Image from 'next/image'
+import Myimage from './images/myImage.jpg'
+
 
 export default function Home() {
   const { language } = useLanguage()
@@ -21,12 +24,12 @@ export default function Home() {
   const content = {
     en: {
       greeting: "Hi, I'm Mehriddin Barnoyev",
-      description: "I'm a passionate Frontend Developer and Graphic Designer based in Tashkent, Uzbekistan.",
+      description: "I'm a passionate Frontend Developer based in Tashkent and Navoi, Uzbekistan.",
       cta: "View My Work",
     },
     uz: {
       greeting: "Salom, men Mehriddin Barnoyev",
-      description: "Men Toshkent, O'zbekistonda yashovchi Frontend Dasturchi va Grafik Dizaynerman.",
+      description: "Men Navoiy, Toshkent, O'zbekistonda yashovchi Frontend Dasturchiman",
       cta: "Ishlarimni Ko'ring",
     },
   }
@@ -36,12 +39,26 @@ export default function Home() {
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
       <ParticleBackground />
-      <main className="relative z-10 flex flex-col items-center justify-center w-full flex-1 px-4 sm:px-20 text-center">
+      <main className="relative z-10 flex flex-col items-center  w-full flex-1 px-4 sm:px-20 text-center">
+        <motion.div
+          className="mb-8"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src= {Myimage}
+            alt="Mehriddin Barnoyev"
+            width={200}
+            height={200}
+            className="rounded-3xl border-4 border-primary shadow-lg"
+          />
+        </motion.div>
         <motion.h1
           className="text-4xl sm:text-6xl font-bold tracking-tighter text-primary"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           {greeting}
         </motion.h1>
@@ -49,14 +66,14 @@ export default function Home() {
           className="mt-3 text-xl sm:text-2xl text-muted-foreground"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           {description}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Button asChild className="mt-8">
             <a href="/portfolio">{cta}</a>
@@ -66,3 +83,4 @@ export default function Home() {
     </div>
   )
 }
+

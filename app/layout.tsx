@@ -1,22 +1,23 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import { ThemeProvider } from './components/ThemeProvider'
-import { LanguageProvider } from './components/LanguageProvider'
-import { Toaster } from "@/components/ui/toaster"
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { ThemeProvider } from "./components/ThemeProvider";
+import { LanguageProvider } from "./components/LanguageProvider";
+import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Your Name - Portfolio',
-  description: 'Frontend Developer and Graphic Designer Portfolio',
-}
+  title: "Mehriddin-Portfolio",
+  description: "Frontend Developer Portfolio",
+  
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -33,6 +34,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
-

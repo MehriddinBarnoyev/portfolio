@@ -52,9 +52,9 @@ export default function About() {
       ],
       experience: [
         {
-          position: "Senior Graphic Design Specialist",
-          company: "Design Agency, Uzbekistan",
-          period: "2020 - 2023",
+          position: "Frontend Mentor",
+          company: "PDP University",
+          period: "2022 - 2023",
         },
         {
           position: "Frontend Developer",
@@ -99,9 +99,9 @@ export default function About() {
       ],
       experience: [
         {
-          position: "Katta Grafik Dizayn Mutaxassisi",
+          position: "Frontend o'qituvchi",
           company: "Dizayn Agentligi, O'zbekiston",
-          period: "2020 - 2023",
+          period: "2022 - 2023",
         },
         {
           position: "Frontend Dasturchi",
