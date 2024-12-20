@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from './components/LanguageProvider'
 import { Button } from "@/components/ui/button"
-import ParticleBackground from './components/ParticleBackground'
 import Image from 'next/image'
 import Myimage from './images/myImage.jpg'
 
@@ -38,7 +37,7 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
-      <ParticleBackground />
+      {/* <ParticleBackground /> */}
       <main className="relative z-10 flex flex-col items-center  w-full flex-1 px-4 sm:px-20 text-center">
         <motion.div
           className="mb-8"
@@ -51,7 +50,7 @@ export default function Home() {
             alt="Mehriddin Barnoyev"
             width={200}
             height={200}
-            className="rounded-3xl border-4 border-primary shadow-lg"
+            className="rounded-3xl border-4 border-primary shadow-lg mt-10"
           />
         </motion.div>
         <motion.h1
