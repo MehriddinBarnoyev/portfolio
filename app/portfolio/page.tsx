@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { GitlabIcon as GitHubIcon, ExternalLinkIcon } from 'lucide-react'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -22,7 +23,7 @@ const projects = [
     id: 2,
     title: 'Task Management App',
     description: 'A collaborative task management tool with real-time updates',
-    image: 'https://storage.googleapis.com/profit-prod/wp-content/uploads/2022/07/d4eaf149-task-management.jpg  ',
+    image: 'https://storage.googleapis.com/profit-prod/wp-content/uploads/2022/07/d4eaf149-task-management.jpg',
     technologies: ['Vue.js', 'Express', 'PostgreSQL', 'Socket.io'],
     liveUrl: 'https://pdp-lesson10-part1.vercel.app/',
     githubUrl: 'https://github.com/MehriddinBarnoyev/pdpLesson10_Part1',
@@ -104,9 +105,11 @@ export default function Portfolio() {
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
-                <img
+              <Image
                   src={project.image}
                   alt={project.title}
+                  width={500}
+                  height={300}
                   className="w-full h-48 object-cover rounded-md mb-4"
                 />
                 <div className="flex flex-wrap gap-2">
