@@ -28,9 +28,10 @@ export default function About() {
         { name: "HTML/CSS", level: 95 },
         { name: "Responsive Design", level: 92 },
         { name: "Redux", level: 80 },
-        { name: "GraphQL", level: 75 },
-        { name: "Webpack", level: 70 },
+        { name: "Java Core", level: 75 },
+        { name: "PosgreSQL", level: 70 },
         { name: "Jest/React Testing Library", level: 78 },
+        { name: "JavaScript", level: 90 },
       ],
       education: [
         {
