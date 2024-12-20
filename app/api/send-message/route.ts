@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  const { name, message , email} = await request.json();
+  const { name, message } = await request.json();
   const token = "7495482176:AAFiVM9_V-FXGN4AGFyAcuQ-hLI5Ompeu6k";
   const chatId = "7481635265";
 
@@ -28,6 +28,8 @@ export async function POST(request: Request) {
       );
     }
   } catch (error) {
+    console.log(error);
+    
     return NextResponse.json({ error: "An error occurred" }, { status: 500 });
   }
 }

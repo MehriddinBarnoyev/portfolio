@@ -50,6 +50,8 @@ const projects = [
 export default function Portfolio() {
   const { language } = useLanguage()
   const [hoveredProject, setHoveredProject] = useState<number | null>(null)
+  console.log(hoveredProject);
+  
 
   const content = {
     en: {

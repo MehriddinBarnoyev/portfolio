@@ -5,7 +5,6 @@ import { useLanguage } from "../components/LanguageProvider";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";

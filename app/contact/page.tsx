@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from '../components/LanguageProvider'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription,  CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -75,6 +75,8 @@ export default function Contact() {
         throw new Error('Failed to send message')
       }
     } catch (error) {
+      console.log(error);
+      
       toast({
         title: errorMessage,
         description: new Date().toLocaleTimeString(),

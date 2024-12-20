@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { GithubIcon as GitHub, Linkedin, Dribbble, Instagram } from 'lucide-react'
+import { GithubIcon as GitHub, Linkedin, Instagram } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
 const Footer = () => {

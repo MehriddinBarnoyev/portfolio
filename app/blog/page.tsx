@@ -38,6 +38,8 @@ const blogPosts = [
 export default function Blog() {
   const { language } = useLanguage()
   const [hoveredPost, setHoveredPost] = useState<number | null>(null)
+  console.log(hoveredPost);
+  
 
   const content = {
     en: {

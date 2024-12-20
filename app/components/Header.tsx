@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
 import { useTheme } from 'next-themes'
 import { useLanguage } from './LanguageProvider'
 import { Moon, Sun, Menu } from 'lucide-react'
@@ -22,6 +21,8 @@ import {
 const Header = () => {
   const pathname = usePathname()
   const { theme, setTheme } = useTheme()
+  console.log(theme);
+  
   const { language, toggleLanguage } = useLanguage()
 
   const navigation = [
