@@ -1,0 +1,13 @@
+[1mdiff --git a/app/portfolio/page.tsx b/app/portfolio/page.tsx[m
+[1mindex 30ac67c..c7738ba 100644[m
+[1m--- a/app/portfolio/page.tsx[m
+[1m+++ b/app/portfolio/page.tsx[m
+[36m@@ -40,7 +40,7 @@[m [mconst projects = [[m
+   {[m
+     id: 4,[m
+     title: 'E-commerce',[m
+[31m-    description: 'A full-stack e-commerce solution with real-time inventory management',[m
+[32m+[m[32m    description: 'A full-stack e-commerce solution with real-time inventory management and order tracking',[m
+     image: 'https://marketingreport.one/Article%20Images/Key%20Industy%20Images/e_commerce_Marketing_Report.jpg',[m
+     technologies: ['Next', 'Shadcn UI', 'Fast API', 'Chart.js', "Socket.io", "Docer"],[m
+     liveUrl: 'https://poetic-conkies-baaaed.netlify.app/dashboard/qoshish/taom',[m

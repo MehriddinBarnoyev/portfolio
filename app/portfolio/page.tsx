@@ -40,12 +40,30 @@ const projects = [
   {
     id: 4,
     title: 'E-commerce',
-    description: 'A full-stack e-commerce solution with real-time inventory management',
+    description: 'A full-stack e-commerce solution with real-time inventory management and order tracking',
     image: 'https://marketingreport.one/Article%20Images/Key%20Industy%20Images/e_commerce_Marketing_Report.jpg',
     technologies: ['Next', 'Shadcn UI', 'Fast API', 'Chart.js', "Socket.io", "Docer"],
     liveUrl: 'https://poetic-conkies-baaaed.netlify.app/dashboard/qoshish/taom',
     githubUrl: 'https://github.com/MehriddinBarnoyev/e.market',
   },
+  {
+    id:5,
+    title:"Online game-components",
+    description:"A full-stack game-components market solution with real-time inventory management, order tracking and real time chat",
+    image:"https://api.playnite.link/docs/manual/gettingStarted/images/playniteDesktopMode_GridView.jpg",
+    technologies:["Nextjs","Tailwind CSS","Fast API","Socket.io", "Shadcn UI", "Docker", "Chart.js", "PostgreSQL"],
+    liveUrl:"https://game-market-ten.vercel.app/",
+    githubUrl:"https://github.com/MehriddinBarnoyev/Game-market"
+  },
+  {
+    id:6,
+    title:"Learning center test site",
+    description:"A full-stack learningcenter site solution with real-time inventory management,",
+    image:"https://www.impactplus.com/hs-fs/hubfs/why-you-need-learning-center%20%281%29.jpg?width=768&height=400&name=why-you-need-learning-center%20%281%29.jpg",
+    technologies:["Nextjs","Tailwind CSS","Fast API","Socket.io", "Shadcn UI", "Docker", "Chart.js", "PostgreSQL"],
+    liveUrl:"https://game-market-ten.vercel.app/",
+    githubUrl:"https://github.com/MehriddinBarnoyev/Learning-center"
+  }
 ]
 
 export default function Portfolio() {
